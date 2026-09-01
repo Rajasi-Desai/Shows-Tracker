@@ -31,6 +31,11 @@ Updated: 31 Aug, 2026
   - the date I watched on
   - summary for each epi (?)
 
+# Attributions
+
+<img src="/src/images/tmdb-logo.svg" alt="Description" width="300">
+This product uses the [TMDB API](https://www.themoviedb.org/documentation/api) but is not endorsed or certified by TMDB.
+
 # Little snippet
 
 I am making this simple project for primarily one reason - I want to feel the accomplishment and joy of when I first started coding. I feel in today's landscape there are a lot of things to worry about and I just needed a reminder of why I chose this as my profession. And if this silly little app can give me the dopamine instead of doom scrolling then why not lol
