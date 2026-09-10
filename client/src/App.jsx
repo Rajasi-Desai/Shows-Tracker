@@ -22,7 +22,7 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/showlist">Shows List</Link>
-        <Link to="/Account">Account info</Link>
+        <Link to="/account">Account info</Link>
       </nav>
 
       {/* 🗺️ Route definitions */}
@@ -30,7 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/showlist" element={<ShowList />} />
-        <Route path="/account" element={<Account />} />
+        <Route path="/account/:accountId" element={<Account />} />
       </Routes>
     </BrowserRouter>
     </>

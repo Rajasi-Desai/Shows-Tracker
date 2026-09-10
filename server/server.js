@@ -16,7 +16,15 @@ app.listen(PORT, () => {
 const apiKey = process.env.TMDB_API_KEY;
 app.get('/api/account', async (req, res) => {
     try {
-        const url = 'https://api.themoviedb.org/3/account/23700911';
+        const accountId = req.query.account_id;
+        if (!accountId) {
+            return res.status(400).json({
+                error: 'account_id is required'
+            });
+        }
+        
+        //https://api.themoviedb.org/3/account/23700911
+        const url = `https://api.themoviedb.org/3/account/${accountId}`;
         const options = {
         method: 'GET',
         headers: {
