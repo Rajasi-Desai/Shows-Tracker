@@ -1,10 +1,14 @@
+require('dotenv').config(); 
+
 const express = require('express');
 const app = express();
-const PORT = 5000;
+//const PORT = 5000;
+const PORT = process.env.PORT;
 
 app.get('/api/data', (req, res) => {
     res.json({ message: "Hello from the Node.js backend!" });
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
