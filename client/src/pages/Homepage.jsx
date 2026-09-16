@@ -2,7 +2,8 @@
 import { useNavigate } from 'react-router-dom';
 import { Button, Pressable, Text, StyleSheet } from 'react-native';
 
-import ShowList from './ShowList';
+import ShowList from './ShowList/ShowList';
+import { ROUTES } from '../routes/paths'
 
 //TODO
 //need to center the button
@@ -11,7 +12,7 @@ export function Home() {
   const navigate = useNavigate(); // 2. Initialize the navigate function
 
   const handleClick = () => {
-    navigate('/showlist'); // 3. Pass the desired path
+    navigate(ROUTES.POPULAR); // 3. Pass the desired path
   };
   return (
     <>
