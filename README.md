@@ -33,7 +33,7 @@ Updated: 31 Aug, 2026
 
 # Attributions
 
-<img src="/show-tracker/images/tmdb-logo.svg" alt="Description" width="300">
+<img src="images/tmdb-logo.svg" alt="Description" width="300">
 This product uses the [TMDB API](https://www.themoviedb.org/documentation/api) but is not endorsed or certified by TMDB.
 
 # Little snippet
