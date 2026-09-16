@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Home } from './pages/homepage'
-import { About } from './pages/Temppage'
+import { About } from './pages/AboutPage'
 import ShowList from './pages/ShowList';
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
@@ -13,7 +13,7 @@ import Account  from './pages/Account';
 
 function App() {
   const [count, setCount] = useState(0)
-  const accountId = 23700911;
+  const accountId = import.meta.env.VITE_ACCOUNT_ID; // my account id for TMDB
 
   return (
     <>
