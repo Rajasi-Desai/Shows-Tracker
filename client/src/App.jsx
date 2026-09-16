@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import { Home } from './pages/homepage'
-import { About } from './pages/AboutPage'
+import { useState } from 'react';
+import { Home } from './pages/homepage';
+import { About } from './pages/AboutPage';
 import ShowList from './pages/ShowList';
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { ROUTES } from './routes/paths';
 
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
@@ -20,18 +21,18 @@ function App() {
       <BrowserRouter>
       {/* 🧭 Navigation Bar available on all pages */}
       <nav style={{ padding: '10px', gap: '10px', display: 'flex' }}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/showlist">Shows List</Link>
-        <Link to={`/account/${accountId}`}>Account info</Link>
+        <Link to={ROUTES.HOME}>Home</Link>
+        <Link to={ROUTES.ABOUT}>About</Link>
+        <Link to={ROUTES.POPULAR}>Popular TV</Link>
+        <Link to={ROUTES.ACCOUNT_BY_ID(accountId)}>Account info</Link>
       </nav>
 
       {/* 🗺️ Route definitions */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/showlist" element={<ShowList />} />
-        <Route path="/account/:accountId" element={<Account />} />
+        <Route path={ROUTES.HOME} element={<Home />} />
+        <Route path={ROUTES.ABOUT} element={<About />} />
+        <Route path={ROUTES.POPULAR} element={<ShowList />} />
+        <Route path={`${ROUTES.ACCOUNT}/:accountId`} element={<Account />} />
       </Routes>
     </BrowserRouter>
     </>
