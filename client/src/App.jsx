@@ -13,6 +13,7 @@ import Account  from './pages/Account';
 
 function App() {
   const [count, setCount] = useState(0)
+  const accountId = 23700911;
 
   return (
     <>
@@ -22,7 +23,7 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/showlist">Shows List</Link>
-        <Link to="/account">Account info</Link>
+        <Link to={`/account/${accountId}`}>Account info</Link>
       </nav>
 
       {/* 🗺️ Route definitions */}
